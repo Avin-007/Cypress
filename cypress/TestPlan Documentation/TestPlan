@@ -1,0 +1,233 @@
+Test Plan 
+
+1. Objectives : This document describes the plan for testing the Demo System. This Test Plan document supports the following objectives:
+
+Identify existing project information and the software that should be tested.
+List the recommended test requirements (high level).
+Recommend and describe the testing strategies to be employed.
+Identify the required resources and provide an estimate of the test efforts.
+List the deliverable elements of the test activities.
+
+
+2. Scope : The interface between the following subsystem is tested 
+           - Course of login
+          - course of quotation reques 
+          - course of quotation retrieve
+          -course of editing profile infromation
+          -course of automating the desired functions 
+
+3. Requirements for test : 
+     A. Functional test : - verify the user login into the system 
+                          - verify the logout of the user 
+                          - verify the profile updates
+                          -verify the quotation request and the details 
+
+      B. Data and Database integirty testing:
+              None                   
+     
+      C. User Interface testing:
+              - verify the validations of input fields 
+              -verify the buttons and the text assertions
+
+      D. performance testing:
+              None  
+
+       E: Load testing:
+                None
+
+
+ Test Objectives: 
+   a.  Function Testing
+Testing of the application should focus on any target requirements that can be traced directly to use cases (or business functions), and business rules. The goals of these tests are to verify proper data acceptance, processing, and retrieval, and the appropriate implementation of the business rules. This type of testing is based upon black box techniques, that is, verifying the application (and its internal processes) by interacting with the application via the GUI and analyzing the output (results). Identified below is an outline of the testing recommended for each application:
+
+ 
+
+Test Objective:	
+Ensure proper application navigation, data entry, processing, and retrieval.
+
+Technique:	
+Execute each use case, use case flow, or function, using valid and invalid data, to verify the following:
+
+-The expected results occur when valid data is used.
+
+-The appropriate error / warning messages are displayed when invalid data is used.
+
+-Each business rule is properly applied.
+
+Completion Criteria:	
+-All planned tests have been executed.
+-All identified defects have been addressed.
+
+b. User Interface Testing
+User Interface testing verifies a user’s interaction with the software. The goal of UI Testing is to ensure that the User Interface provides the user with the appropriate access and navigation through the functions of the applications. In addition, UI Testing ensures that the objects within the UI function as expected and conform to corporate or industry standards.
+
+ 
+
+Test Objective:	
+Verify the following:
+-Navigation through the application properly reflects business functions and requirements, including window to window, field to field, and use of access methods (tab keys, mouse movements, accelerator keys)
+-Window objects and characteristics, such as menus, size, position, state, and focus conform to standards.
+
+Technique:	
+-Create / modify tests for each window to verify proper navigation and object states for each application window and objects.
+
+Completion Criteria:	
+Each window successfully verified to remain consistent with benchmark version or within acceptable standard
+
+
+3. Roles and Responsibilities
+    A. Test Manager : Provides management oversight
+
+Responsibilities:
+
+Provide technical direction
+Acquire appropriate resources
+Management reporting
+
+B. Test Designer:Identifies, prioritizes, and implements test cases
+
+Responsibilities:
+
+Generate test plan
+Generate Test Suite
+Evaluate effectiveness of test effort
+
+
+C. System Tester	:	Executes the tests
+
+Responsibilities:
+
+Execute tests
+Log results
+Recover from errors
+Document defects
+
+D. Test System Administrator:	Ensures test environment and assets are managed and maintained.
+
+Responsibilities:
+
+Administer test management system
+Install / manage worker access to test systems
+
+E. Database Administration / Database Manager:	Ensures test data (database) environment and assets are managed and maintained.
+
+Responsibilities:
+
+Administer test data (database)
+
+F. Designer	:Identifies and defines the operations, attributes, and associations of the test classes
+
+Responsibilities:
+
+Identifies and defines the test class(es)
+Identifies and defines the test packages
+
+G. Implementer	:Implements and unit tests the test classes and test packages
+
+Responsibilities:
+
+Creates the test classes and packages implemented in the Test Suite.
+
+
+4. Deliverables 
+
+||Deliverable||                ||Owner ||                 ||Reviewer ||          
+  Test Plan                                                  QA Manager
+  Test Environments
+  Test Suites 
+  Test Scripts
+  Defect Report 
+  Test Results
+
+
+5. Test Suite
+The Test Suite will define all the test cases and the test scripts which are associated with each test case.
+
+    5.1  Test logs 
+    It is planned to use RequisitePro to identify the test cases and to track the status of each test case. The test results will be summarized in RequisitePro as untested, passed, conditional pass, or failed. In summary, RequisitePro will be setup to support the following attributes for each test case, as defined in the Requirements Attributes Guidelines [17]:
+
+-Test status
+-Build Number
+-Tested By
+-Date Tested
+-Test Notes
+It will be the responsibility of the System Tester to update the test status in RequisitePro.
+
+Test results will be retained under Configuration Control.
+
+
+6. Project Tasks
+Below are the test related tasks for testing the C-Registration Architectural Prototype:
+
+6.1 Plan Test
+
+
+                    Identify Requirements for Test
+
+                    Assess Risk
+
+                    Develop Test Strategy
+
+                    Identify Test Resources
+
+                    Create Schedule
+
+                    Generate Test Plan
+
+6.2 Design Test
+
+
+        Workload Analysis (not applicable for Prototype)
+
+        Develop Test Suite
+
+        Identify and Describe Test Cases
+
+        Identify and Structure Test Scripts
+
+        Review and Access Test Coverage
+
+
+6.2 Implement Test
+
+
+      Setup Test Environment
+
+      Record or Program Test Scripts
+
+      Develop Test Stubs and Drivers
+
+      Identify Test-Specific functionality in the design and implementation model
+
+      Establish External Data sets
+
+
+
+6.4 Execute Test
+
+            Execute Test Scripts
+
+            Evaluate Execution of Test
+
+            Recover from Halted Test
+
+            Verify the results
+
+            Investigate Unexpected Results
+
+            Log Defects
+
+
+6.5 Evaluate Test
+
+
+    Evaluate Test-Case Coverage
+
+    Evaluate Code Coverage
+
+    Analyze Defects
+
+    Determine if Test Completion Criteria and Success Criteria have been achieved
+
+    Create Test Evaluation Report
+   

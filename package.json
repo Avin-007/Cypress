@@ -1,0 +1,38 @@
+{
+  "name": "cucumberbdd",
+  "version": "1.0.0",
+  "description": "test automation with cypress using type script and cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Avin-007/typeScript.git"
+  },
+  "keywords": [
+    "cypress",
+    "automation",
+    "gherkins",
+    "cucumber",
+    "bdd",
+    "typescript"
+  ],
+  "author": "Avin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Avin-007/typeScript/issues"
+  },
+  "homepage": "https://github.com/Avin-007/typeScript#readme",
+  "devDependencies": {
+    "cypress": "^10.10.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^13.0.3",
+    "@cypress/webpack-preprocessor": "^5.15.0",
+    "cypress": "latest",
+    "ts-loader": "latest",
+    "typescript": "^4.8.4"
+  }
+}
