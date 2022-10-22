@@ -1,5 +1,5 @@
 
-Feature: duckduckgo.com
+Feature: Reequest Quotation
   Scenario: Request new quotation
   Given User is already logged in
    Then I should see Request quotation
