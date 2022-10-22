@@ -1,5 +1,9 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
+Cypress.on('uncaught:exception', (err, runnable) => {
+  return false;
+});
+
 
 
 
