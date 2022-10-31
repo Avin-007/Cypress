@@ -75,8 +75,7 @@ npm install Typescript
 
 
 
-
-##  Upadate following packages
+### Upadate following packages
 
 
 6. package.json
@@ -167,18 +166,18 @@ export default defineConfig({
   },
 });
 
-##  RUN TEST 
+###  RUN TEST 
  npx cypress open 
  `` select the desired test``
  
-## Test examples
+### Test examples
 
 |File||
 |--|--|
 |`./src/features/google.search.feature`|An example of testing the Google search|
 |`./src/features/sample.snippets.feature`|Samples of using the existing test snippets. Credits [Christian Bromann](https://github.com/christian-bromann)|
 
-## Adding tests
+### Adding tests
 
 Tests are written using [Gherkin syntax](https://cucumber.io/docs/gherkin/) in a fashion that can be used as feature documentation:
 
@@ -212,7 +211,6 @@ There are over 150 predefined steps, but in case you need an extra step you can 
 The snippets are defined using regular expressions. It allows to implement powerful and complex sentences.
 Everything that's within `"([^"]*)?"` gets captured and appended to the callback.  
 To access browser functionality, reference the global variable `browser` which is a *WebdriverIO* browser instance.
-See the [documentation](https://webdriver.io/docs/api.html) for a list of supported methods.  
 Assertions are written using [chai](https://www.chaijs.com/). 
 
 ### Browser specific tests
@@ -247,15 +245,4 @@ Feature: Performing a Google Search
     Scenario: Searching for WebdriverIO
     ...
 ```
-
-### Verbose tests
-
-Currently, a screenshot is attached only for a failing test. In case you want screenshots for a test regardless of its completion status,
-use the `@Verbose` tag:
-
-```gherkin
-Feature: Performing a Google Search
-
-    ...
-
 
