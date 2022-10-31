@@ -1,87 +1,63 @@
-# Web Automation Framework with BDD
 
-Boilerplate project to write BDD tests with [Cucumber](https://cucumber.io/). 
-Tests are written in an ordinary language that bridges the gap between business and technical people.
+# WEB automation with Cypress & Cucumber
 
-## Features
+Boilerplate project to write BDD tests with Cucumber. Tests are written in an ordinary language that bridges the gap between business and technical people.
 
+# Features
 - Simple setup, no need for local preinstalled Selenium Grid and browser drivers
-- Test with *Chrome* and *Firefox* with zero configuration
 
-- BDD tests with [Cucumber](https://cucumber.io/docs/cucumber/) and over 150 predefined steps
-- Implement custom steps with [TypeScript](https://www.typescriptlang.org/)
+- Test with Chrome and Firefox with zero configuration
+
+- BDD tests with Cucumber and over 150 predefined steps
+
+- Implement custom steps with TypeScript
+
 - Support for debugging tests
+
 - Possibility to visually see the execution in browser with Video Test Results
 
-
-
-## Requirements
+# Requirements
 
 - Tests are executed with Node.js, requires:
-  - `Node.js` version 10 or higher
-  - `npm` version 6 or higher
+    - Node.js version 10 or higher
+    - npm version 6 or higher
 
+# Quick Start Guide 
 
-## Quick start
+1. Installation of dependencies 
 
-1. Install dependencies required to run the tests:
+   a. Cypress
 
 ```sh
-npm install
+npm install cypress --save -dev
+
 ```
+b. Cucumber Dependencies 
 
-2.  CUCUMBER Installation
-
- 
- ```sh
+```sh
 npm install @badeball/cypress-cucumber-preprocessor
+
 ```
+
+c. TypeScript Dependencies 
+
 ```sh
-
-
-3. Install TypeScript
-
 npm install Typescript
 
-4. Update latest node modules 
+```
 
- npm install 
+d. Install tsconfig.ts file to cypress directory 
 
-5. Install tsconfig.ts  file to test folder directory 
+```sh
+npx run tsc --init 
 
- $npx run tsc --init 
+```
 
-    "typescript"
-  ],
-  "author": "Avin",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Avin-007/typeScript/issues"
-  },
-  "homepage": "https://github.com/Avin-007/typeScript#readme",
-  "devDependencies": {
-    "cypress": "^10.10.0"
-  },
-  "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^13.0.3",
-    "@cypress/webpack-preprocessor": "^5.15.0",
-    "cypress": "latest",
-    "ts-loader": "latest",
-    "typescript": "^4.8.4"
-  }
-}
+# Configuration packages 
 
+1. package. json 
 
-
-
-
-### Upadate following packages
-
-
-6. package.json
- 
- 
-{
+     {
   "name": "cucumberbdd",
   "version": "1.0.0",
   "description": "test automation with cypress using type script and cucumber",
@@ -100,14 +76,12 @@ npm install Typescript
     "gherkins",
     "cucumber",
     "bdd",
- 
- 
- 
- 
- 7. Replace existing cypress.config.ts  file with the following 
- 
- 
- import { defineConfig } from "cypress";
+
+
+ 2. Replace existing cypress.config.ts file 
+
+
+import { defineConfig } from "cypress";
 import webpack from "@cypress/webpack-preprocessor";
 
 import { addCucumberPreprocessorPlugin } from "@badeball/cypress-cucumber-preprocessor";
@@ -166,11 +140,17 @@ export default defineConfig({
   },
 });
 
-###  RUN TEST 
- npx cypress open 
- `` select the desired test``
- 
-### Test examples
+
+
+# Run Test
+
+```sh
+npx cypress open
+
+```
+
+# Test Examples 
+
 
 |File||
 |--|--|
@@ -196,53 +176,29 @@ Feature: Performing a Google Search
         When I set "Selenium Webdriver" to the inputfield "[name=q]"
         And  I press "Enter"
         Then I expect that element "#search" becomes displayed
-```
 
-All tests should be located in `./src/features/*` directory with extension `.feature` (configured in `./config/tests.config.ts`).  
+```
+All tests should be located in ./src/features/* directory with extension .feature (configured in ./config/tests.config.ts).
 For a list of predefined and supported steps see files:
-- `./src/steps/given.ts` 
-- `./src/steps/when.ts` 
-- `./src/steps/then.ts`.  
 
-The steps are inspired from [cucumber-boilerplate](https://github.com/webdriverio/cucumber-boilerplate#list-of-predefined-steps) repository.
+./src/steps/given.ts
+./src/steps/when.ts
+./src/steps/then.ts.
+The steps are inspired from cucumber-boilerplate repository.
 
-### Implementing custom steps
-There are over 150 predefined steps, but in case you need an extra step you can add it in one of the `./src/steps` file.  
-The snippets are defined using regular expressions. It allows to implement powerful and complex sentences.
-Everything that's within `"([^"]*)?"` gets captured and appended to the callback.  
-To access browser functionality, reference the global variable `browser` which is a *WebdriverIO* browser instance.
-Assertions are written using [chai](https://www.chaijs.com/). 
 
-### Browser specific tests
-To run a test against a specific browser use predefined [tags](https://cucumber.io/docs/cucumber/api/#tags):
 
-```gherkin
-Feature: Performing a Google Search
 
-    ...
 
-    # This scenario will run only in Chrome browser
-    @OnlyChrome
-    Scenario: Searching in chrome browser
-    ...
 
-    # This scenario will run only in Firefox browser
-    @OnlyFirefox
-    Scenario: Searching in Firefox browser
-    ...
-```
 
-### Pending tests
 
-To skip a test, use the `@Pending` tag:
-```gherkin
-Feature: Performing a Google Search
 
-    ...
 
-    # This scenario will be skipped
-    @Pending
-    Scenario: Searching for WebdriverIO
-    ...
-```
+
+
+
+
+
+     
 
