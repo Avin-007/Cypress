@@ -54,6 +54,8 @@ Then  ('I select satrt of policy',() =>{
   cy.get("#quotation_vehicle_attributes_policystart_3i").select("7")
 })
 
+
+
 Then  ('I calculate premium',() =>{
   cy.get('input[value="Calculate Premium"]').click()
 
